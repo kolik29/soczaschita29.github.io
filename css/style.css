@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "AvantGarde";
+  src: url("../fonts/AvantGarde.otf"); }
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "AvantGarde";
+  margin: 0;
+  padding: 15px 0;
+  margin-top: 15vh;
+  background-image: url("../img/bkg.png");
+  background-size: 100%; }
+  body .main {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    body .main .row {
+      display: flex;
+      justify-content: space-between; }
+      body .main .row .block {
+        display: flex;
+        align-items: center; }
+        body .main .row .block img {
+          height: 150px; }
+        body .main .row .block p {
+          margin-left: 15px;
+          text-align: center;
+          font-size: 20px; }
+          body .main .row .block p span {
+            font-size: 10.5px; }
+    body .main h1 {
+      font-size: 40px;
+      font-weight: 100;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      margin: 3em 0; }
+    body .main .bottom p {
+      text-align: center;
+      font-size: 25px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      width: 100%; }
+    body .main .bottom h2 {
+      text-align: center;
+      font-weight: 100;
+      font-size: 30px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-bottom: 1rem;
+      width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
