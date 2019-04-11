@@ -19,7 +19,7 @@ body {
     justify-content: space-between; }
     body .main .row {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-around; }
       body .main .row .block {
         display: flex;
         align-items: center; }
