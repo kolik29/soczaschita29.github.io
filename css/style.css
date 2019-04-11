@@ -22,7 +22,9 @@ body {
       justify-content: space-around; }
       body .main .row .block {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        text-decoration: none;
+        color: unset; }
         body .main .row .block img {
           height: 150px; }
         body .main .row .block p {
