@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "AvantGarde";
+  src: url("../fonts/AvantGarde.otf"); }
+a {
+  text-decoration: none;
+  color: unset; }
+
+h1 {
+  margin: 5px 0;
+  font-size: 25px; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "AvantGarde"; }
+  body header,
+  body main,
+  body footer {
+    position: relative; }
+    body header .inner,
+    body main .inner,
+    body footer .inner {
+      max-width: 1200px;
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 15px;
+      display: grid; }
+  body header .inner {
+    grid-template-columns: 1fr 1fr;
+    color: #231f20; }
+    body header .inner .logo {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      text-align: left;
+      height: 100%; }
+      body header .inner .logo img {
+        height: 115px;
+        margin-right: 20px; }
+
+/*# sourceMappingURL=style.css.map */
