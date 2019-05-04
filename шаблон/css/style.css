@@ -3,11 +3,102 @@
   src: url("../fonts/AvantGarde.otf"); }
 a {
   text-decoration: none;
-  color: unset; }
+  color: unset;
+  transition: 0.3s; }
+  a:hover {
+    color: #f50; }
+
+menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "AvantGarde"; }
+  font-family: "AvantGarde";
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #484848; }
+  body header,
+  body main,
+  body footer {
+    display: flex;
+    justify-content: center; }
+    body header .inner,
+    body main .inner,
+    body footer .inner {
+      max-width: 1200px;
+      width: 100%; }
+  body header .logo,
+  body footer .logo {
+    display: flex;
+    align-items: center; }
+    body header .logo:hover,
+    body footer .logo:hover {
+      color: unset; }
+    body header .logo .logo-img,
+    body footer .logo .logo-img {
+      background-image: url("../img/logo.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+  body header menu,
+  body footer menu {
+    display: flex;
+    flex-grow: 1; }
+    body header menu a:hover,
+    body footer menu a:hover {
+      color: #f50; }
+  body header {
+    font-size: 20px;
+    line-height: 1em;
+    border-bottom: 3px solid #f50; }
+    body header .inner {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 25px 0;
+      align-items: center;
+      position: relative; }
+    body header .logo .logo-img {
+      width: 4em;
+      height: 4em; }
+    body header menu {
+      margin-top: 1em;
+      justify-content: flex-end; }
+      body header menu li {
+        padding: 0 1em;
+        transition: 0.3s; }
+        body header menu li:last-child {
+          padding: 0 0 0 1em; }
+        body header menu li:first-child {
+          padding: 0 1em 0 0; }
+  body footer {
+    background: #f1f2f2;
+    padding: 50px 0;
+    font-size: 20px;
+    line-height: 1.5em; }
+    body footer h1 {
+      font-size: 20px; }
+    body footer .inner {
+      display: grid;
+      grid-template-columns: 40% 1fr auto;
+      align-items: flex-start;
+      grid-gap: 0 3em; }
+    body footer .logo {
+      margin-bottom: 1.5em;
+      font-weight: 700;
+      line-height: 1em; }
+      body footer .logo .logo-img {
+        height: 3em;
+        width: 3em;
+        margin-right: 0.5em; }
+    body footer .contacts {
+      line-height: 1.5em;
+      font-size: 16px; }
+    body footer menu {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      justify-content: flex-start; }
 
 /*# sourceMappingURL=style.css.map */
