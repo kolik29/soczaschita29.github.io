@@ -13,13 +13,17 @@ menu {
   margin: 0;
   padding: 0; }
 
+ul {
+  margin: 0; }
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: "AvantGarde";
   display: grid;
   grid-template-rows: auto 1fr auto;
-  color: #484848; }
+  color: #484848;
+  overflow-y: hidden; }
   body header,
   body main,
   body footer {
@@ -29,7 +33,8 @@ body {
     body main .inner,
     body footer .inner {
       max-width: 1200px;
-      width: 100%; }
+      width: 100%;
+      padding: 0 15px; }
   body header .logo,
   body footer .logo {
     display: flex;
@@ -53,7 +58,10 @@ body {
   body header {
     font-size: 20px;
     line-height: 1em;
-    border-bottom: 3px solid #f50; }
+    border-bottom: 3px solid #f50;
+    z-index: 1;
+    background: #fff;
+    position: relative; }
     body header .inner {
       display: grid;
       grid-template-columns: auto auto;
@@ -74,6 +82,34 @@ body {
           align-items: center;
           padding: 0 1em;
           height: 100%; }
+          body header menu li a.active {
+            color: #f50; }
+          body header menu li a:hover + ul {
+            height: unset;
+            opacity: 1; }
+        body header menu li ul {
+          position: absolute;
+          padding: 0;
+          margin: 0;
+          left: 0;
+          top: calc(100% - 3px);
+          height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: opacity 0.5s;
+          margin-top: 3px; }
+          body header menu li ul:hover {
+            height: unset;
+            opacity: 1; }
+          body header menu li ul li {
+            list-style-type: none;
+            font-size: 0.9em;
+            display: grid;
+            align-items: baseline;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 25px 15px;
+            width: 100%;
+            padding: 15px; }
   body footer {
     background: #f1f2f2;
     padding: 50px 0;
