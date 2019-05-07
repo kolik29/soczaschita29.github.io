@@ -129,6 +129,9 @@ body {
       max-width: 1200px;
       width: 100%;
       line-height: 3em; }
+      body main .breadcrumbs .breadecrumbs-item:last-child {
+        color: #f50;
+        font-weight: 700; }
     body main .inner {
       grid-template-columns: 1fr 25%;
       grid-gap: 50px;
@@ -176,7 +179,8 @@ body {
       body main aside ul {
         list-style: none;
         padding: 0;
-        border-left: 1px solid #dde0e3; }
+        border-left: 1px solid #dde0e3;
+        margin-top: 5px; }
         body main aside ul li {
           padding: 0 1.5em;
           border-left: 3px solid #00000000;
