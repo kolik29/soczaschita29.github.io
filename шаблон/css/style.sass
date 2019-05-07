@@ -37,6 +37,7 @@ body
 			max-width: 1200px
 			width: 100%
 			padding: 0 15px
+			display: grid
 
 	header,
 	footer
@@ -98,23 +99,34 @@ body
 						color: #f50
 
 					&:hover + ul
-						height: unset
+						top: calc(100% - 3px)
 						opacity: 1
 
 				ul
 					position: absolute
-					padding: 0
 					margin: 0
 					left: 0
-					top: calc(100% - 3px)
-					height: 0
-					overflow: hidden
+					top: -100vw
 					opacity: 0
 					transition: opacity .5s
 					margin-top: 3px
+					padding: 1.5em 0
+					background: #fff
+					border-top: 3px solid #f50
+
+					&:after
+						position: absolute
+						width: 100vw
+						height: 100%
+						box-shadow: 0 10px 30px 0 rgba(1, 46, 154, .15)
+						content: ''
+						top: 0
+						left: 50%
+						margin-left: -50vw
+						z-index: -1
 
 					&:hover
-						height: unset
+						top: calc(100% - 3px)
 						opacity: 1
 
 					li
@@ -126,6 +138,94 @@ body
 						grid-gap: 25px 15px
 						width: 100%
 						padding: 15px
+
+	main
+		flex-direction: column
+		align-items: baseline
+		justify-content: flex-start
+
+		.breadcrumbs
+			max-width: 1200px
+			width: 100%
+
+		.inner
+			grid-template-columns: 1fr 25%
+			grid-gap: 50px
+			padding-bottom: 2em
+
+		.content
+			.search
+				max-width: 100%
+				padding: .5em .5em .5em 1em
+				display: grid
+				grid-template-columns: 1fr auto 12.5%
+				transition: .3s
+				border: 1px solid #dde0e3
+				border-radius: 3px
+				grid-gap: 1em
+
+				&:hover
+					border-color: #f50
+
+				input
+					border: none
+					font-size: 1em
+					outline: none
+
+					&::placeholder
+						font-style: italic
+						transition: .3s
+
+					&:focus::placeholder
+						color: transparent
+
+				.calendar
+					display: grid
+					grid-template-columns: 1fr 1em 1fr
+					align-items: center
+
+					input
+						width: 85px
+						text-align: center
+
+					span
+						text-align: center
+
+				button
+					border: none
+					background: #f50
+					color: #fff
+					font-weight: 700
+					border-radius: 3px
+					padding: 1em 0
+					cursor: pointer
+					outline: none
+
+		aside
+			align-self: baseline
+
+			ul
+				list-style: none
+				padding: 0
+				border-left: 1px solid #dde0e3
+
+				li
+					padding: 0 1.5em
+					border-left: 3px solid #00000000
+					margin-left: -1px
+					transition: .3s
+
+					&.current
+						border-color: #f50
+						color: #f50
+
+					a
+						padding: 1em 0
+						display: block
+
+					&:not(:last-child)
+						a
+							border-bottom: 1px solid #dde0e3
 
 	footer
 		background: #f1f2f2
