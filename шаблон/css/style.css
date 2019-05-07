@@ -123,11 +123,12 @@ body {
             padding: 15px; }
   body main {
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: flex-start; }
     body main .breadcrumbs {
       max-width: 1200px;
-      width: 100%; }
+      width: 100%;
+      line-height: 3em; }
     body main .inner {
       grid-template-columns: 1fr 25%;
       grid-gap: 50px;
