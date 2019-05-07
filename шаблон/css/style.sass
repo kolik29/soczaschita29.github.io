@@ -1,0 +1,162 @@
+@font-face
+	font-family: 'AvantGarde'
+	src: url('../fonts/AvantGarde.otf')
+
+a
+	text-decoration: none
+	color: unset
+	transition: .3s
+
+	&:hover
+		color: #f50
+
+menu
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+ul
+	margin: 0
+
+body
+	margin: 0
+	min-height: 100vh
+	font-family: 'AvantGarde'
+	display: grid
+	grid-template-rows: auto 1fr auto
+	color: #484848
+	overflow-y: hidden
+
+	header,
+	main,
+	footer
+		display: flex
+		justify-content: center
+
+		.inner
+			max-width: 1200px
+			width: 100%
+			padding: 0 15px
+
+	header,
+	footer
+		.logo
+			display: flex
+			align-items: center
+
+			&:hover
+				color: unset
+
+			.logo-img
+				background-image: url('../img/logo.png')
+				background-position: center
+				background-size: contain
+				background-repeat: no-repeat
+
+		menu
+			display: flex
+			flex-grow: 1
+
+			a:hover
+				color: #f50
+
+	header
+		font-size: 20px
+		line-height: 1em
+		border-bottom: 3px solid #f50
+		z-index: 1
+		background: #fff
+		position: relative
+
+		.inner
+			display: grid
+			grid-template-columns: auto auto
+			align-items: center
+			position: relative
+
+		.logo
+			padding: 15px 0
+
+			.logo-img
+				width: 4em
+				height: 4em
+
+		menu
+			justify-content: flex-end
+			height: 100%
+
+			li
+				transition: .3s
+
+				a
+					display: flex
+					align-items: center
+					padding: 0 1em
+					height: 100%
+
+					&.active
+						color: #f50
+
+					&:hover + ul
+						height: unset
+						opacity: 1
+
+				ul
+					position: absolute
+					padding: 0
+					margin: 0
+					left: 0
+					top: calc(100% - 3px)
+					height: 0
+					overflow: hidden
+					opacity: 0
+					transition: opacity .5s
+					margin-top: 3px
+
+					&:hover
+						height: unset
+						opacity: 1
+
+					li
+						list-style-type: none
+						font-size: .9em
+						display: grid
+						align-items: baseline
+						grid-template-columns: repeat(5, 1fr)
+						grid-gap: 25px 15px
+						width: 100%
+						padding: 15px
+
+	footer
+		background: #f1f2f2
+		padding: 50px 0
+		font-size: 20px
+		line-height: 1.5em
+
+		h1
+			font-size: 20px
+
+		.inner
+			display: grid
+			grid-template-columns: 40% 1fr auto
+			align-items: flex-start
+			grid-gap: 0 3em
+
+		.logo
+			margin-bottom: 1.5em
+			font-weight: 700
+			line-height: 1em
+
+			.logo-img
+				height: 3em
+				width: 3em
+				margin-right: .5em
+
+		.contacts
+			line-height: 1.5em
+			font-size: 16px
+
+		menu
+			display: grid
+			grid-template-rows: auto auto auto auto
+			justify-content: flex-start
