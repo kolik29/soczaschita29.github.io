@@ -81,7 +81,7 @@ body {
         body header menu li a {
           display: flex;
           align-items: center;
-          padding: 0 1em;
+          padding: 0 0.6em;
           height: 100%; }
           body header menu li a.active {
             color: #f50; }
